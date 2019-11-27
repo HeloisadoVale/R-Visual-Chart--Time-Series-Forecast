@@ -1,0 +1,132 @@
+{
+  "dataRoles": [
+    
+    {
+      "displayName": "ChartType",
+      "description": "Table Type",
+      "kind": "GroupingOrMeasure",
+      "name": "ChartType"
+    },
+      {
+      "displayName": "X",
+      "description": "Table Type",
+      "kind": "GroupingOrMeasure",
+      "name": "X"
+    }
+	,
+      {
+      "displayName": "Y",
+      "description": "Table Type",
+      "kind": "GroupingOrMeasure",
+      "name": "Y"
+    }
+	,
+      {
+      "displayName": "Legend",
+      "description": "Table Type",
+      "kind": "GroupingOrMeasure",
+      "name": "Legend"
+    },
+	
+      {
+      "displayName": "Column",
+      "description": "Table Type",
+      "kind": "GroupingOrMeasure",
+      "name": "Column"
+    }
+	,
+	
+      {
+      "displayName": "Row",
+      "description": "Table Type",
+      "kind": "GroupingOrMeasure",
+      "name": "Row"
+    }
+	
+  ],
+  "dataViewMappings": [
+    {
+      "scriptResult": {
+        "dataInput": {
+          "table": {
+            "rows": {
+              "select": [
+                
+                {
+                  "for": {
+                    "in": "ChartType"
+                  }
+                }
+			 ,
+                {
+                  "for": {
+                    "in": "X"
+                  }
+                }
+			,
+                {
+                  "for": {
+                    "in": "Y"
+                  }
+                }
+			,
+                {
+                  "for": {
+                    "in": "Legend"
+                  }
+                }
+			,
+                {
+                  "for": {
+                    "in": "Column"
+                  }
+                }
+			,
+                {
+                  "for": {
+                    "in": "Row"
+                  }
+                }
+			
+              ],
+              "dataReductionAlgorithm": {
+                "top": {}
+              }
+            }
+          }
+        },
+        "script": {
+          "scriptProviderDefault": "R",
+          "scriptOutputType": "html",
+          "source": {
+            "objectName": "rcv_script",
+            "propertyName": "source"
+          },
+          "provider": {
+            "objectName": "rcv_script",
+            "propertyName": "provider"
+          }
+        }
+      }
+    }
+  ],
+  "objects": {
+    "rcv_script": {
+      "properties": {
+        "provider": {
+          "type": {
+            "text": true
+          }
+        },
+        "source": {
+          "type": {
+            "scripting": {
+              "source": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "suppressDefaultTitle": true
+}
