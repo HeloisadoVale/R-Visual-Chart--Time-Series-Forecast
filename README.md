@@ -1,12 +1,11 @@
 
  
-# Overview R Custom Visual Chart (Facet Chart)
+# Overview R Custom Visual Chart (Time Series Forecast)
 
-This is an R custom visual for Power BI users. This chart helps us to show  4 to 5 variables at the same time in the format of Scatter Chart, BarChart, and BoxPlot. 
-This chart is a table chart that accepts at least four variables. 
+This is an R custom visual for Power BI users. This chart helps us to create an attractive and interactive visual for time series forecast using dygraphs library.  
+
 ## Variables
-Two integer or continuous variable for X and Y. 
-for the legend, Row and Column should be categorical data
-## Chart Type
-By default, it is a scatter chart but also support Barchart and Boxplot. you need to create a "measure" for BoxPlot and Barchart and allocate value "BarChart" for showing the bar chart and value or "BoxPlot" to show box plot.
+One date/datetime variable for X.
+One integer or continuous variable for Y.
+One integer variable for steps to forecast. 
 
